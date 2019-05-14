@@ -1,31 +1,33 @@
 import random
 
-prompt = "--------------------------------\n" \
-        "Welcome to the Number Guessing Game\n" \
-        "--------------------------------\n"
-guess = int(input("Pick a number between 1-10: "))
-play_again = input("Would you like to play again [y]es/[n]o?")
-answer = int(input(random.randrange(1, 10)))
+# play_again = input("Would you like to play again [y]es/[n]o?")
+# answer = int(input(random.randrange(1, 10)))
 
 
 def start_game():
-    print(guess)
-    while not answer:
-        tries = 0
-        if guess > answer:
-            print("It's lower")
-        if guess < answer:
-            print("It's Higher")
-        if guess == answer:
-            print("Got it\n"
-                  "It took you, {} guesses\n".format(int(tries)))
-            print(play_again)
-            if play_again.upper() == 'y':
-                continue
-            else:
-                break
+    # Welcome player
+    print("--------------------------------\n"
+          "Welcome to the Number Guessing Game\n"
+          "--------------------------------\n")
+    # guess takes the input and then prints the output
+    guess = int(input("Pick a number between 1-10: "))
 
-        tries += 1
+    # while not answer:
+    #     tries = 0
+    #     if guess > answer:
+    #         print("It's lower")
+    #     if guess < answer:
+    #         print("It's Higher")
+    #     if guess == answer:
+    #         print("Got it\n"
+    #               "It took you, {} guesses\n".format(int(tries)))
+    #         print(play_again)
+    #         if play_again.upper() == 'y':
+    #             continue
+    #         else:
+    #             break
+    #
+    #     tries += 1
 
     # """Psuedo-code Hints
     #
