@@ -1,49 +1,35 @@
 import random
 
-answer = int(random.randrange(1, 10))
-
 
 def start_game():
     # Welcome player
     print("--------------------------------\n"
           "Welcome to the Number Guessing Game\n"
           "--------------------------------\n")
-    # guess takes the input and then prints the output
+    # Variables for while loop
+    games_plated = 0
+    atmpts = 0
+    answer = int(random.randrange(1, 10))
     # continuously prompt player for a guess
-    # answer = int(random.randrange(1, 10)) use this for random number generator
-    answer = int(4)
-    # tries = 0
-
-    # find out how to get the 'pick a number string to only appear once'.
-    # guess = int(input("Pick a number between 1-10: "))
     while True:
-        # tries += guess
         guess = int(input("Pick a number between 1-10: "))
-
+        games_plated += 1
+        atmpts += 1
         if guess > answer:
             print("It's lower")
         elif guess < answer:
             print("It's Higher")
         else:
             print("Got it")
+            print("It took you {} atempts".format(atmpts))
             play_again = input("Would you like to play again [y]es/[n]o?")
             if play_again.lower() == 'y':
-                print(guess)
+                continue
             else:
-                print()
+                print("The game has ended, You played {} times and it took you {} attempts.\n"
+                      "See you later next time".format(games_plated, atmpts))
                 break
 
-    # print('Got it')
-
-            # print(tries)
-        # elif guess == answer:
-        #     print("Got it\n"
-        #           "It took you, {} guesses\n".format(int(tries)))
-
-
-
-
-    # tries += 1
 
     # """Psuedo-code Hints
     #
