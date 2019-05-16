@@ -1,7 +1,6 @@
 import random
 
-# play_again = input("Would you like to play again [y]es/[n]o?")
-# answer = int(input(random.randrange(1, 10)))
+answer = int(random.randrange(1, 10))
 
 
 def start_game():
@@ -10,24 +9,41 @@ def start_game():
           "Welcome to the Number Guessing Game\n"
           "--------------------------------\n")
     # guess takes the input and then prints the output
-    guess = int(input("Pick a number between 1-10: "))
+    # continuously prompt player for a guess
+    # answer = int(random.randrange(1, 10)) use this for random number generator
+    answer = int(4)
+    # tries = 0
 
-    # while not answer:
-    #     tries = 0
-    #     if guess > answer:
-    #         print("It's lower")
-    #     if guess < answer:
-    #         print("It's Higher")
-    #     if guess == answer:
-    #         print("Got it\n"
-    #               "It took you, {} guesses\n".format(int(tries)))
-    #         print(play_again)
-    #         if play_again.upper() == 'y':
-    #             continue
-    #         else:
-    #             break
-    #
-    #     tries += 1
+    # find out how to get the 'pick a number string to only appear once'.
+    # guess = int(input("Pick a number between 1-10: "))
+    while True:
+        # tries += guess
+        guess = int(input("Pick a number between 1-10: "))
+
+        if guess > answer:
+            print("It's lower")
+        elif guess < answer:
+            print("It's Higher")
+        else:
+            print("Got it")
+            play_again = input("Would you like to play again [y]es/[n]o?")
+            if play_again.lower() == 'y':
+                print(guess)
+            else:
+                print()
+                break
+
+    # print('Got it')
+
+            # print(tries)
+        # elif guess == answer:
+        #     print("Got it\n"
+        #           "It took you, {} guesses\n".format(int(tries)))
+
+
+
+
+    # tries += 1
 
     # """Psuedo-code Hints
     #
