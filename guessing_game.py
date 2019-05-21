@@ -13,9 +13,11 @@ def start_game():
         print(welcome)
         print(saw)
 
-    atmpts = 0
-    answer = random.randint(0, 9)
+    # atmpts = 0
+    # answer = random.randint(0, 9)
     while True:
+        atmpts = 0
+        answer = random.randint(0, 9)
         atmpts += 1
         try:
             guess = int(input("Pick a number between 1-10: "))
